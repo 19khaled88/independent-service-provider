@@ -7,9 +7,9 @@ export const Register = () => {
   }
   console.log(register)
   return (
-    <div class="container w-2/6 mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+    <div class="container absolute inset-0 top-28 w-2/6 mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
       {register === true ? (
-        <div>
+        <div className="mt-5">
           <p className="text-2xl mb-4 text-teal-600">Login Page</p>
           <div class="mb-4">
             <label
