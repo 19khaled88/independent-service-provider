@@ -74,13 +74,13 @@ export const Register = () => {
           <div class="mb-6">
             <label
               class="block text-grey-darker text-sm font-bold mb-2"
-              for="password"
+              for="confirm_password"
             >
               Confirm Password
             </label>
             <input
               class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
-              id="password"
+              id="confirm_password"
               type="password"
               placeholder="******************"
             />
@@ -109,13 +109,28 @@ export const Register = () => {
           )}
         </div>
         <div>
-          <a
-            class="pl-2 inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker"
-            href="#"
-          >
+          <button class="pl-2 inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker">
             Forgot Password?
-          </a>
+          </button>
         </div>
+      </div>
+      <div className='flex justify-center items-center mt-6'>
+      {
+        register === true ?
+        
+        <button
+              className="bg-fuchsia-600 py-2 px-4 w-full text-sm text-white rounded border border-green focus:outline-none focus:border-green-dark"
+          >
+              Sign In
+          </button>
+          :
+          <button
+              className="bg-fuchsia-600 py-2 px-4 w-full text-sm text-white rounded border border-green focus:outline-none focus:border-green-dark"
+          >
+              Sign Up
+          </button>
+      }
+          
       </div>
     </div>
   )
