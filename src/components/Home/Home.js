@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 export const Home = () => {
+  const name = useRef('')
+  const desc = useRef('')
+  const price = useRef('')
   const images = [
     '/images/tourism-1.png',
     '/images/tourism-2.png',
@@ -19,6 +22,9 @@ export const Home = () => {
     imgIndex++
   }, 3000)
   const checkoutHandler = () => {
+    console.log(name.current?.innerText)
+    console.log(desc.current?.innerText)
+    console.log(price.current?.innerText)
     navigate('/checkout')
   }
   return (
@@ -42,8 +48,13 @@ export const Home = () => {
               alt="Sunset in the mountains"
             />
             <div className="">
-              <div className="font-bold text-xl mb-2">Visa Processing</div>
-              <p className="text-gray-700 text-base text-justify">
+              <div ref={name} className="font-bold text-xl mb-2">
+                Visa Processing
+              </div>
+              <p
+                ref={desc}
+                className="text-gray-700 text-base text-justify desc"
+              >
                 We have the biggest international logistics and service delivery
                 partner's network ot process your visa from any visa office
                 around the world. Our partner are the top notch organizatios in
@@ -51,7 +62,10 @@ export const Home = () => {
               </p>
             </div>
             <div className="flex flex-row justify-between mt-3 mb-3">
-              <span className="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <span
+                ref={price}
+                className="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 price"
+              >
                 $6000
               </span>
 
@@ -70,8 +84,10 @@ export const Home = () => {
               alt="Sunset in the mountains"
             />
             <div className="">
-              <div className="font-bold text-xl mb-2">5 Start Hotel room</div>
-              <ul className="text-gray-700 text-base list-disc px-5">
+              <div ref={name} className="font-bold text-xl mb-2">
+                5 Start Hotel room
+              </div>
+              <ul ref={desc} className="text-gray-700 text-base list-disc px-5">
                 <li>Spacious room with cozy decorations</li>
                 <li>Welcoming receptionist for your lovely entrence</li>
                 <li>Healthy stay and healthy food items</li>
@@ -79,7 +95,10 @@ export const Home = () => {
               </ul>
             </div>
             <div className="flex flex-row justify-between mt-3 mb-3">
-              <span className="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <span
+                ref={price}
+                className="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
                 $5000
               </span>
 
@@ -98,8 +117,10 @@ export const Home = () => {
               alt="Sunset in the mountains"
             />
             <div className="">
-              <div className="font-bold text-xl mb-2">Home drop Car</div>
-              <p className="text-gray-700 text-base">
+              <div ref={name} className="font-bold text-xl mb-2">
+                Home drop Car
+              </div>
+              <p ref={desc} className="text-gray-700 text-base">
                 We are the town-hero in arrainging your safe and comfortable
                 journey towards destination. We are not ready to compromise with
                 customer's travel satisfaction as we give customer priority
@@ -107,7 +128,10 @@ export const Home = () => {
               </p>
             </div>
             <div className="flex flex-row justify-between mt-3 mb-3">
-              <span className="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <span
+                ref={price}
+                className="inline-block bg-orange-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
                 $8000
               </span>
 

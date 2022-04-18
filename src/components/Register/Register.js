@@ -128,6 +128,7 @@ export const Register = () => {
       sendsEmailVerification = 'Email verification Sending...'
     }
     createUserWithEmailAndPassword(email, password)
+    emailVerified(email)
   }
   const emailVerified = async (email) => {
     await sendEmailVerification()
