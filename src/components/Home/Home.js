@@ -34,7 +34,7 @@ export const Home = () => {
       <div className="mt-10">
         <h3 className="text-center text-3xl mb-6">Services</h3>
 
-        <div className="container mx-auto justify-around flex flex-row mb-6">
+        <div className="container mx-auto justify-around flex flex-col  lg:flex-row md:flex-col sm:flex-col sm:items-center md:items-center sm:justify-center md:justify-center sm:space-y-3 md:space-y-3 lg:space-y-0 lg:space-x-3 sm:space-x-0 md:space-x-0 sm:mx-auto md:mx-auto sm:w-full md:w-full mb-6">
           <div className="flex flex-col px-4 max-w-sm rounded overflow-hidden shadow-lg">
             <img
               className="w-full"
