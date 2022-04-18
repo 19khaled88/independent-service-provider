@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 export const Home = () => {
   const images = [
     '/images/tourism-1.png',
@@ -7,7 +7,7 @@ export const Home = () => {
     '/images/tourism-3.png',
     '/images/tourism-4.png',
   ]
-
+  const navigate = useNavigate()
   let imgIndex = 0
 
   setInterval(() => {
@@ -18,6 +18,9 @@ export const Home = () => {
     document.getElementById('slider-img').setAttribute('src', imgUrl)
     imgIndex++
   }, 3000)
+  const checkoutHandler = () => {
+    navigate('/checkout')
+  }
   return (
     <div className="container mx-auto flex flex-col">
       <div className="mb-5 py-6 mt-10">
@@ -52,7 +55,10 @@ export const Home = () => {
                 $6000
               </span>
 
-              <button className="inline-block bg-pink-400 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <button
+                onClick={checkoutHandler}
+                className="inline-block bg-pink-400 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
                 Checkout
               </button>
             </div>
@@ -77,7 +83,10 @@ export const Home = () => {
                 $5000
               </span>
 
-              <button className="inline-block bg-pink-400 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <button
+                onClick={checkoutHandler}
+                className="inline-block bg-pink-400 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
                 Checkout
               </button>
             </div>
@@ -102,7 +111,10 @@ export const Home = () => {
                 $8000
               </span>
 
-              <button className="inline-block bg-pink-400 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              <button
+                onClick={checkoutHandler}
+                className="inline-block bg-pink-400 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
                 Checkout
               </button>
             </div>
