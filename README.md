@@ -2,13 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-### General Info
+### 5 bullet points
+    1. implementation of google authentication
+    2. implementation of user create and login system.
+    3. add header and footer on every pages.
+    4. 404 not found page if desired page is not found.
+    5. responsive for mobile and desktop
+
+ ### Used library
+    1. react js library
+    2. tailwind css framework
 
 
 ## Available Scripts
