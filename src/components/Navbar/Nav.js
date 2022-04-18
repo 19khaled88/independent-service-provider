@@ -1,23 +1,23 @@
-import { signOut } from '@firebase/auth';
-import React, { useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
-import auth from '../../Auth/firebase.init';
+import { signOut } from '@firebase/auth'
+import React, { useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { Link, useNavigate } from 'react-router-dom'
+import auth from '../../Auth/firebase.init'
 export default function Navbar({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const [user, loading, error] = useAuthState(auth);
-  
-  const navigate = useNavigate();
-  const signOutHandler=()=>{
-    signOut(auth).then(()=>{
-      navigate("/");
+  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [user, loading, error] = useAuthState(auth)
 
-    }).catch((error)=>{
-      console.log('sign out:',error);
-    });
+  const navigate = useNavigate()
+  const signOutHandler = () => {
+    signOut(auth)
+      .then(() => {
+        navigate('/')
+      })
+      .catch((error) => {
+        console.log('sign out:', error)
+      })
   }
   return (
-    
     <>
       <nav className="fixed inset-x-0 flex flex-wrap items-center justify-between px-2 py-3 bg-teal-500">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
@@ -76,6 +76,14 @@ export default function Navbar({ fixed }) {
               <li className="nav-item">
                 <Link
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                  to="/checkout"
+                >
+                  <span className="ml-2">Checkout</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                   to="/services"
                 >
                   <span className="ml-2">Services</span>
@@ -98,22 +106,21 @@ export default function Navbar({ fixed }) {
                 </Link>
               </li>
               <li className="nav-item">
-              {
-                user !== null ?
-                <button onClick={signOutHandler}
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                {user !== null ? (
+                  <button
+                    onClick={signOutHandler}
+                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                   >
-                  <span className="ml-2">Logout</span>
-                </button>
-                :
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="/register"
-                >
-                  <span className="ml-2">Register</span>
-                </Link>
-              }
-                
+                    <span className="ml-2">Logout</span>
+                  </button>
+                ) : (
+                  <Link
+                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    to="/register"
+                  >
+                    <span className="ml-2">Register</span>
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

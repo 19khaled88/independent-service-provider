@@ -9,20 +9,30 @@ import { Notfound } from './components/Notfound/Notfound'
 import Profile from './components/Profile/Profile'
 import { Register } from './components/Register/Register'
 import { Services } from './components/Services/Services'
+import { Checkout } from './components/Checkout/Checkout'
+import { RequiredAuth } from './Auth/RequiredAuth'
 function App() {
   return (
     <div>
       {/* <header className="App-header"></header> */}
       <Navbar></Navbar>
-        <Routes>
-          <Route path="/" element={<Home></Home>} />
-          <Route path="/profile" element={<Profile></Profile>}/>
-          <Route path="/services" element={<Services></Services>} />
-          <Route path="/about" element={<About></About>} />
-          <Route path="/blog" element={<Blog></Blog>} />
-          <Route path="/register" element={<Register></Register>} />
-          <Route path="*" element={<Notfound></Notfound>} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home></Home>} />
+        <Route path="/profile" element={<Profile></Profile>} />
+        <Route
+          path="/checkout"
+          element={
+            <RequiredAuth>
+              <Checkout></Checkout>
+            </RequiredAuth>
+          }
+        />
+        <Route path="/services" element={<Services></Services>} />
+        <Route path="/about" element={<About></About>} />
+        <Route path="/blog" element={<Blog></Blog>} />
+        <Route path="/register" element={<Register></Register>} />
+        <Route path="*" element={<Notfound></Notfound>} />
+      </Routes>
       <Footer></Footer>
     </div>
   )
