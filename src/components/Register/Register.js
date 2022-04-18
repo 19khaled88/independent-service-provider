@@ -6,6 +6,7 @@ import {
   useCreateUserWithEmailAndPassword,
   useSignInWithEmailAndPassword,
   useSendPasswordResetEmail,
+  useSendEmailVerification,
 } from 'react-firebase-hooks/auth'
 import { useNavigate, useLocation } from 'react-router-dom'
 import auth from '../../Auth/firebase.init'
@@ -28,6 +29,9 @@ export const Register = () => {
     error2,
   ] = useSignInWithEmailAndPassword(auth)
   const [sendPasswordResetEmail, sending, error3] = useSendPasswordResetEmail(
+    auth,
+  )
+  const [sendEmailVerification, sending1, error4] = useSendEmailVerification(
     auth,
   )
   const [user, setUser] = useState('')
@@ -90,7 +94,8 @@ export const Register = () => {
 
     signInWithEmailAndPassword(email, password)
   }
-
+  let sendsEmailVerification
+  let sendEmailVerificationError
   const submitSignupHandler = (event) => {
     event.preventDefault()
     const email = emailRef.current.value
@@ -111,14 +116,34 @@ export const Register = () => {
       }, 3000)
       return timer
     }
+    if (error4) {
+      sendEmailVerificationError = error4.message
+    }
+    if (sending) {
+      sendsEmailVerification = 'Email verification Sending...'
+    }
     createUserWithEmailAndPassword(email, password)
+    emailVerified(email)
   }
+  const emailVerified = async (email) => {
+    await sendEmailVerification(email)
+    alert('Sent Email')
+  }
+  let sendEmailError
+  let emailSending
   const resetEmailHandler = async () => {
+    if (error3) {
+      sendEmailError = error3.message
+    }
+    if (sending) {
+      emailSending = 'Sending....'
+    }
     await sendPasswordResetEmail(email)
-    console.log(email)
+
     setShowModal(false)
     alert('Sent Email')
   }
+
   return (
     <div class="container absolute inset-0 top-16 w-2/6 mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
       {register === true ? (
