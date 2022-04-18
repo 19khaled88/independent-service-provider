@@ -27,7 +27,7 @@ function App() {
             </RequiredAuth>
           }
         />
-        <Route path="/services" element={<Services></Services>} />
+
         <Route path="/about" element={<About></About>} />
         <Route path="/blog" element={<Blog></Blog>} />
         <Route path="/register" element={<Register></Register>} />

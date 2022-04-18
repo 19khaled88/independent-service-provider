@@ -123,86 +123,43 @@ export const Home = () => {
         </div>
       </div>
       <div className="mt-10 mb-10">
-        <h3 className="text-center text-3xl mb6">Up Comming Serices</h3>
+        <h3 className="text-center text-3xl mb-6">Up Comming Serices</h3>
 
-        <div className="container mx-auto justify-around flex flex-row mb-6">
+        <div className="container mx-auto justify-around flex flex-col  lg:flex-row md:flex-col sm:flex-col sm:items-center md:items-center sm:justify-center md:justify-center sm:space-y-3 md:space-y-3 lg:space-y-0 lg:space-x-3 sm:space-x-0 md:space-x-0 sm:mx-auto md:mx-auto sm:w-full md:w-full mb-6">
           <div className="flex flex-col max-w-sm rounded overflow-hidden shadow-lg">
             <img
               className="w-full"
-              src="/img/card-top.jpg"
+              src="/images/online-talking.jpg"
               alt="Sunset in the mountains"
             />
             <div className="">
-              <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <div className="font-bold text-xl mb-2">Online conversation</div>
               <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                The Speaking Club Online is the best way to practice speaking in
+                English and other languages online in a real life setting.
+                Structured conversation groups with a native English host.
               </p>
             </div>
-            <div className="">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
+            <div className=""></div>
           </div>
           <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <img
               className="w-full"
-              src="/img/card-top.jpg"
+              src="/images/one_to_one.jpeg"
               alt="Sunset in the mountains"
             />
             <div className="">
-              <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <div className="font-bold text-xl mb-2">
+                One to One travel consultation
+              </div>
               <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                It’s no secret that communication is key to good management. But
+                good communication isn’t always easy. One-on-one conversations
+                are a simple but effective way to improve communication with
+                your employees and increase engagement.
               </p>
             </div>
-            <div className="">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img
-              className="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div className="">
-              <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div className="">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
+            <div className=""></div>
           </div>
         </div>
       </div>

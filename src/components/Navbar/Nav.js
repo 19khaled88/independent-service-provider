@@ -83,14 +83,7 @@ export default function Navbar({ fixed }) {
                   <span className="ml-2">Checkout</span>
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  to="/services"
-                >
-                  <span className="ml-2">Services</span>
-                </Link>
-              </li>
+
               <li className="nav-item">
                 <Link
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
