@@ -1,6 +1,6 @@
 # Travel and Tour solution
 
-Live Link: [Create React App](https://profound-buttercream-efd233.netlify.app/).
+Live Link: [Travel_and_Tour_solution](https://profound-buttercream-efd233.netlify.app/).
 
 ### 5 bullet points
 
