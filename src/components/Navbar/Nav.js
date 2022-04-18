@@ -2,6 +2,7 @@ import { signOut } from '@firebase/auth'
 import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, useNavigate } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 import auth from '../../Auth/firebase.init'
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -21,6 +22,7 @@ export default function Navbar({ fixed }) {
     <>
       <nav className="fixed inset-x-0 flex flex-wrap items-center justify-between px-2 py-3 bg-teal-500">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <ToastContainer />
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"

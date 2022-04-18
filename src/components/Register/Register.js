@@ -1,6 +1,7 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import React, { useRef, useState } from 'react'
-import { Modal, Button } from 'react-bootstrap'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
@@ -141,7 +142,8 @@ export const Register = () => {
     await sendPasswordResetEmail(email)
 
     setShowModal(false)
-    alert('Sent Email')
+    // alert('Sent Email')
+    toast('Reset Email Sent!')
   }
 
   return (
