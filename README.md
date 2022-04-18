@@ -1,18 +1,19 @@
 # Travel and Tour solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Link: [Create React App](https://github.com/facebook/create-react-app).
 
 ### 5 bullet points
+
     1. implementation of google authentication
     2. implementation of user create and login system.
     3. add header and footer on every pages.
     4. 404 not found page if desired page is not found.
     5. responsive for mobile and desktop
 
- ### Used library
+### Used library
+
     1. react js library
     2. tailwind css framework
-
 
 ## Available Scripts
 
@@ -80,4 +81,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # independent-service-provider-19khaled88
