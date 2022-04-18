@@ -65,12 +65,16 @@ export const Register = () => {
   const emailRef = useRef('')
   const passwordRef = useRef('')
   const confPasswordRef = useRef('')
-  let errorState
+  let errorState1
+  let errorState2
   let loadingState
   let currUser
 
-  if (error1 || error2) {
-    errorState = error.message
+  if (error1) {
+    errorState1 = error1.message
+  }
+  if (error2) {
+    errorState2 = error2.message
   }
   if (loading1 || loading2) {
     loadingState = 'Loading...'
@@ -124,10 +128,9 @@ export const Register = () => {
       sendsEmailVerification = 'Email verification Sending...'
     }
     createUserWithEmailAndPassword(email, password)
-    emailVerified(email)
   }
   const emailVerified = async (email) => {
-    await sendEmailVerification(email)
+    await sendEmailVerification()
     alert('Sent Email')
   }
   let sendEmailError
@@ -184,7 +187,10 @@ export const Register = () => {
                 required
               />
             </div>
-            <p className="text-red-600">{error ? error : ''}</p>
+            <p className="text-red-600">
+              {error ? error : ''} {errorState1 ? errorState1 : ''}{' '}
+              {errorState2 ? errorState2 : ''}
+            </p>
 
             <div className="flex justify-center items-center mt-2">
               {register === true ? (
@@ -255,7 +261,10 @@ export const Register = () => {
               />
             </div>
 
-            <p className="text-red-600">{error ? error : ''}</p>
+            <p className="text-red-600">
+              {error ? error : ''} {errorState1 ? errorState1 : ''}{' '}
+              {errorState2 ? errorState2 : ''}
+            </p>
             <div className="flex justify-center items-center mt-2">
               {register === true ? (
                 <button className="bg-fuchsia-600 py-1 px-4 w-full text-sm text-white rounded border border-green focus:outline-none focus:border-green-dark">
